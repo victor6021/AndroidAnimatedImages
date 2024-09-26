@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/animated_image"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toTopOf="@id/button_pause"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:src="@android:drawable/ic_media_play"
+        android:id="@+id/button_play"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintTop_toBottomOf="@id/animated_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button_pause"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:src="@android:drawable/ic_media_pause"
+        android:id="@+id/button_pause"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_play"
+        app:layout_constraintEnd_toStartOf="@id/button_next"
+        app:layout_constraintTop_toBottomOf="@id/animated_image"/>
+
+    <ImageView
+        android:src="@android:drawable/ic_media_next"
+        android:id="@+id/button_next"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_pause"
+        app:layout_constraintTop_toBottomOf="@id/animated_image"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
